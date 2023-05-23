@@ -1,0 +1,68 @@
+/* 체크하지 못 한부분
+
+1.동일한 코드를 두번 작성
+.ex_1 > h2 , p > 하나로 콤마를 써서 작성 OR 제일 최상위 부모에 코드를 작성해줘도 무관
+* text-align : center;
+2. 줄바꿈 <br>태그로 작성하기
+3. 이미지 width값 설정X
+
+새로운 개념
+ * : 모든 파일의 개념에게 전체 적용하기
+.. box-sizing: border-box;
+ㄴmargin border값을 다 포함해서 
+
+작업할때 하위의 사이즈는 px작업 보다는 % 작업을 많이 사용
+ㄴ 반응형으로 많이 작업하기때문 
+
+폰트값 적용하기
+1. 구글폰트에서 원하는 폰트 import링크를 css파일 제일 상단에 적어주기
+2. * 전체적용되는 값에 폰트패밀리 링크를 적용해주기
+
+: 사용시
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap');
+
+h2, p{margin: 0;}
+* {box-sizing: border-box;
+font-family: 'Noto Sans', sans-serif;}
+
+
+.ex_1 {
+    width: 1045px;
+    margin: 100px auto;
+    background-color: #f6f5f5;
+    border:1px solid #ddd;
+    padding: 80px;
+    text-align: center;
+}
+
+.ex_1 > h2 {
+    font-size: 36px;
+    line-height: 50px;
+    color: #dc3545;
+}
+
+.ex_1 > p {
+    font-size: 18px;
+    color: #424d59;
+    margin: 30px 0 70px 0;
+}
+
+.ex_1 > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ex_1 > div > p{
+    width: 32%;
+}
+
+.ex_1 > div > p > img{
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.ex_1 > div > p > img:hover{
+    filter: grayscale(0);
+}
